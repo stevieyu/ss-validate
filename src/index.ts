@@ -1,4 +1,4 @@
-import Core from './Core';
+import Core from './core';
 import Required from './Required';
 
 export default class extends Core {
