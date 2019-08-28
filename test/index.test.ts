@@ -4,6 +4,6 @@ const validate = new Validate();
 
 describe('blah', () => {
   it('works', () => {
-    expect(validate.rules).toStrictEqual({});
+    expect(validate.messages).toStrictEqual({});
   });
 });
