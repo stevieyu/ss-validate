@@ -1,5 +1,7 @@
 # TSDX Bootstrap
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/stevieyu/ss-validate.svg)](https://greenkeeper.io/)
+
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 
 ## Local Development
