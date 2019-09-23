@@ -38,6 +38,6 @@
     "pretty-quick": "1.11.1",
     "tsdx": "0.9.0",
     "tslib": "1.10.0",
-    "typescript": "3.5.3"
+    "typescript": "3.6.3"
   }
 }
