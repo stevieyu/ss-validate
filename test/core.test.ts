@@ -11,13 +11,13 @@ describe('set', () => {
     expect(core.rules).toStrictEqual(rules);
 
     const attributes = {
-      name: '名字'
+      name: '名字',
     };
     core.mergeAttributes(attributes);
     expect(core.attributes).toStrictEqual(attributes);
 
     const messages = {
-      'name.required': '缺少:attribute'
+      'name.required': '缺少:attribute',
     };
     core.mergeMessages(messages);
     expect(core.messages).toStrictEqual(messages);

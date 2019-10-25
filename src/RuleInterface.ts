@@ -1,7 +1,5 @@
-
 export default interface RuleInterface {
+  passes(attribute: string, value: any): boolean;
 
-  passes(attribute: string, value: any): boolean
-
-  message(): string
+  message(): string;
 }
