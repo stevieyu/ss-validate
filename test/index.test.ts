@@ -1,9 +1,10 @@
-import Validate from '../src';
+import validate, { Validate } from '../src';
 
-const validate = new Validate();
-
-describe('blah', () => {
-  it('works', () => {
-    expect(validate.messages).toStrictEqual({});
+describe('init', () => {
+  it('function', () => {
+    expect(validate().messages).toStrictEqual({});
+  });
+  it('class', () => {
+    expect(new Validate().messages).toStrictEqual({});
   });
 });
