@@ -3,7 +3,7 @@
   "description": "数据验证辅助",
   "version": "0.1.0",
   "main": "dist/index.js",
-  "module": "dist/ss-validate.esm.js",
+  "module": "dist/index.mjs",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
@@ -14,8 +14,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
+    "start": "tsup src/index.ts --watch --dts --format esm,cjs,iife",
+    "build": "tsup src/index.ts --minify --dts --format esm,cjs,iife",
     "test": "tsdx test",
     "lint": "tsdx lint --fix"
   },
@@ -31,10 +31,15 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
+  "dependencies": {
+  },
   "devDependencies": {
-    "@types/jest": "25.2.1",
-    "husky": "4.2.5",
-    "pretty-quick": "2.0.1",
-    "tsdx": "0.13.0"
+    "lodash": "^4.17.15",
+    "@types/lodash": "^4.14.168",
+    "husky": "^4.2.5",
+    "pretty-quick": "^2.0.1",
+    "tsup": "^4.0.0",
+    "typescript": "^4.1.5",
+    "tslib": "^2.1.0"
   }
 }

@@ -3,16 +3,15 @@ import Required from './Required';
 
 export class Validate extends Core {
   rules: object = {
-    required: new Required(),
+    required: Required(),
   };
 }
 
 export const validate = (
-  messages: object = {},
+  data: object,
+  rules: object = {},
   attributes: object = {},
-  rules: object = {}
-) => {
-  return new Validate(messages, attributes, rules);
-};
+  messages: object = {}
+) => new Validate().check(data, rules, attributes, messages);
 
 export default validate;

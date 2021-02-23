@@ -1,10 +1,20 @@
-import validate, { Validate } from '../src';
+import validate from '../src';
 
-describe('init', () => {
-  it('function', () => {
-    expect(validate().messages).toStrictEqual({});
-  });
-  it('class', () => {
-    expect(new Validate().messages).toStrictEqual({});
+describe('function', () => {
+  it('required', () => {
+    const res = validate(
+      {
+        a: null,
+        b: undefined,
+        c: NaN,
+        d: '',
+        e: 0,
+      },
+      {
+        e: 'required',
+      }
+    );
+
+    expect(res).toStrictEqual({ e: 0 });
   });
 });

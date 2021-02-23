@@ -1,6 +1,10 @@
 import RuleInterface from 'RuleInterface';
 
-export default class Required implements RuleInterface {
+export class Required implements RuleInterface {
+  constructor(...param: any[]) {
+    Object.assign(this, param);
+  }
+
   passes(_attribute: string, value: any): boolean {
     return !!value;
   }
@@ -9,3 +13,5 @@ export default class Required implements RuleInterface {
     return ':attribute 必须存在';
   }
 }
+
+export default (...args: any[]) => new Required(...args);
